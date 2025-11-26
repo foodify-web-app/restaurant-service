@@ -10,12 +10,16 @@ const restaurantSchema = new mongoose.Schema({
   cuisineTypes: [{ type: String }],
   isOpen: { type: Boolean, default: true },
   offers: { type: String },
-  ownerId: { type: String, required: true }, // Reference to user with role 'restaurant'
-  status: { 
-    type: String, 
-    enum: ['approved', 'pending', 'rejected'], 
-    default: 'pending' 
+  ownerId: {
+    type: String,
+    required: true,
+  }, // Reference to user with role 'restaurant'
+  status: {
+    type: String,
+    enum: ['approved', 'pending', 'rejected'],
+    default: 'pending'
   },
+
 }, { timestamps: true });
 
 const restaurantModel = mongoose.models.restaurant || mongoose.model("restaurant", restaurantSchema);
