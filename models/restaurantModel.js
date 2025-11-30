@@ -13,7 +13,7 @@ const restaurantSchema = new mongoose.Schema({
   ownerId: {
     type: String,
     required: true,
-  }, // Reference to user with role 'restaurant'
+  },
   status: {
     type: String,
     enum: ['approved', 'pending', 'rejected'],

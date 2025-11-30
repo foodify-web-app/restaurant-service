@@ -1,5 +1,5 @@
 import express from "express";
-import { authMiddleware, adminMiddleware } from "common-utils";
+import { authMiddleware, adminMiddleware } from "../middleware/auth.middleware.js";
 import { createRestaurant, deleteRestaurant, getAllRestaurants, getAllRestaurantsAdmin, getRestaurantById, updateRestaurant, updateRestaurantStatus } from "../controllers/restaurantController.js";
 
 const restaurantRouter = express.Router();
